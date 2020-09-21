@@ -4,5 +4,9 @@
  * @returns {Number}
  */
 function sumSalary(salaries) {
-  // ваш код...
+  let sumSalary = 0;
+  for (let key in salaries) {
+    sumSalary = sumSalary + (typeof(salaries[key]) === 'number' ? salaries[key] : 0);
+  }
+  return sumSalary;
 }
