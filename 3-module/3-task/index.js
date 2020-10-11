@@ -11,8 +11,6 @@ function camelize(str) {
   strArr.forEach(function(item, index, array) {
     let newItem;
    
-    // if(item != ''){
-      
       if(item != '' && index > 0){
         let firstSymb = item != '' ? item[0].toUpperCase() : '',
           restSymb = item.slice(1);
@@ -24,8 +22,6 @@ function camelize(str) {
     
       newStrArr.push(newItem);
       prevItemNotEmpty = true;
-    // }
-   
   });
 
   let newStr = newStrArr.join('');
